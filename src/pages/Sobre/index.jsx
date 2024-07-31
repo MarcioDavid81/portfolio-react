@@ -5,7 +5,6 @@ import css from './images/icon-css.svg'
 import js from './images/icon-js.svg'
 import react from './images/icon-react.svg'
 import node from './images/icon-node.svg'
-import sql from './images/icon-sql.svg'
 
 function Sobre() {
     return (
@@ -16,14 +15,14 @@ function Sobre() {
                 <div className={styles.textos}>
                     <h2>Sobre</h2>
 
-                    <p>Sou <span>Edson Maia</span> <br />
-                    <strong>Dev Full Stack</strong> </p>
+                    <p>Sou <span>Marcio David</span> <br />
+                    <strong>Dev Front End</strong> </p>
 
-                    <p>Trabalho com desenvolvimento Web desde 2000.</p>
+                    <p>Estudo desenvolvimento Web desde 2024.</p>
 
-                    <p>Sou apaixonado por transformar ideias em realidade digital.</p>
+                    <p>Apaixonado por tecnologia e tudo o que engloba este setor.</p>
 
-                    <p>Especializado em criação de aplicações dinâmicas e intuitivas, <br />
+                    <p>Buscando sempre transformar ideias em criações de aplicações dinâmicas e intuitivas, <br />
                     com foco na experiência do usuário.</p>
                 </div>
             </div>
@@ -36,7 +35,6 @@ function Sobre() {
                     <img src={js} alt="Ícone do js" />
                     <img src={react} alt="Ícone do react" />
                     <img src={node} alt="Ícone do node" />
-                    <img src={sql} alt="Ícone do sql" />
                 </div>
             </div>
    

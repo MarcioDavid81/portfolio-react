@@ -24,6 +24,11 @@
     font-weight: bold;
 }
 
+.bio img{
+    width: 300px;
+    border-radius: 50%;
+}
+
 .textos h2, p {
     margin-bottom: 1rem;
 }

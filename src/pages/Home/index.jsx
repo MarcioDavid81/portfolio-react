@@ -6,9 +6,9 @@ function Home() {
         <section className={styles.home}>
             <div className={styles.apresentacao}>
             <p>
-                Olá, sou <br/>
-                <span>Edson Maia</span> <br/>
-                Dev Full Stack
+                Hello World! I'm <br/>
+                <span>Marcio David</span> <br/>
+                Dev Front End
             </p>
             <Link to="/sobre" className={`${styles.btn} ${styles.btn_red}`}>
                 Saiba mais sobre mim
