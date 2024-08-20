@@ -1,10 +1,17 @@
 import styles from './Contatos.module.css'
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs'
 import { GoMail } from 'react-icons/go'
+import { motion } from 'framer-motion'
 
 function Contatos() {
     return (
-        <section className={styles.contatos}>
+        <motion.section
+            className={styles.contatos}
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, x: 100 }}
+        >
             <h2>Contatos</h2>
             <h3>Entre em contato</h3>
             <p>Para que possamos conversar mais sobre</p>
@@ -33,7 +40,7 @@ function Contatos() {
 
             </div>
 
-        </section>
+        </motion.section>
     )
 }
 

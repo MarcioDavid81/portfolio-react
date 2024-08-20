@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Card from '../../components/Card'
 import styles from './Projetos.module.css'
+import { motion } from 'framer-motion'
 
 function Projetos() {
 
@@ -8,7 +9,7 @@ function Projetos() {
 
     useEffect(() => {
         const buscarRepositorios = async () => {
-            const response = await fetch('https://api.github.com/users/edsonmaia/repos?page=1&per_page=50')
+            const response = await fetch('https://api.github.com/users/MarcioDavid81/repos?page=1&per_page=50')
             const data = await response.json()
             setRepositories(data)
         }
@@ -16,7 +17,13 @@ function Projetos() {
     }, [])
 
     return (
-        <section className={styles.projetos}>
+        <motion.section
+            className={styles.projetos}
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, x: 100 }}
+        >
             <h2>Projetos</h2>
             {
                 repositories.length > 0 ? (
@@ -36,7 +43,7 @@ function Projetos() {
                     <p>Carregando repositórios...</p>
                 )
             }
-        </section>
+        </motion.section>
     )
 }
 

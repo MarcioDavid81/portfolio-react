@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './Header.module.css'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 function Header() {
 
@@ -10,7 +11,12 @@ function Header() {
     }
 
     return (
-        <header className={styles.header}>
+        <motion.header
+            className={styles.header}
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <Link to="/">
                 <span>marciodavid.com</span>
             </Link>
@@ -31,7 +37,7 @@ function Header() {
                 <span className={styles.linha}></span>
                 <span className={styles.linha}></span>
             </div>
-        </header>
+        </motion.header>
     )
 }
 

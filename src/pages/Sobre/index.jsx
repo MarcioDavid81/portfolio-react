@@ -5,10 +5,17 @@ import css from './images/icon-css.svg'
 import js from './images/icon-js.svg'
 import react from './images/icon-react.svg'
 import node from './images/icon-node.svg'
+import { motion } from 'framer-motion'
 
 function Sobre() {
     return (
-        <section className={styles.sobre}>
+        <motion.section
+            className={styles.sobre}
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, x: 100 }}
+        >
              
              <div className={styles.bio}>
                 <img src={avatar} alt="Avatar" className={styles.avatar} />
@@ -38,7 +45,7 @@ function Sobre() {
                 </div>
             </div>
    
-        </section>
+        </motion.section>
     )
 }
 

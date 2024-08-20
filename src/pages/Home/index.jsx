@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
+import { motion } from 'framer-motion'
 
 function Home() {
     return (
-        <section className={styles.home}>
+        <motion.section
+            className={styles.home}
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, x: 100 }}
+        >
             <div className={styles.apresentacao}>
             <p>
                 Hello World! I'm <br/>
@@ -17,7 +24,7 @@ function Home() {
             <figure>
             <img className={styles.img_home} src="/developer-red.svg" alt="Imagem de Home" />
             </figure>
-        </section>
+        </motion.section>
     )
 }
 
